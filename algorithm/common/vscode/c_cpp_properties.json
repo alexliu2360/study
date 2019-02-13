@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/alexliu/software/codeblocks-16.01mingw-nosetup/MinGW/include/*",
+                "D:/alexliu/software/codeblocks-16.01mingw-nosetup/MinGW/lib/gcc/mingw32/4.9.2/include/*",
+                "D:/alexliu/software/codeblocks-16.01mingw-nosetup/MinGW/lib/gcc/mingw32/4.9.2/include/c++/*",
+                "D:/alexliu/software/codeblocks-16.01mingw-nosetup/MinGW/lib/gcc/mingw32/4.9.2/include/c++/mingw32/*",
+                "D:/alexliu/software/codeblocks-16.01mingw-nosetup/MinGW/lib/gcc/mingw32/4.9.2/include/c++/backward/*",
+                "D:/alexliu/software/codeblocks-16.01mingw-nosetup/MinGW/lib/gcc/mingw32/4.9.2/include/c++/iostream"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "compilerPath": "D:/alexliu/software/codeblocks-16.01mingw-nosetup/MinGW/bin/g++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
