@@ -3,7 +3,9 @@
 <a href="#flask_wtf">1.flask_wtf</a>  
 <a href="#flask_socketio">2.flask_socketio</a>  
 <a href="#flask_sqlalchemy">3.flask_sqlalchemy</a>  
-<a href="#flask_httpauth">3.flask_httpauth</a>  
+<a href="#flask_httpauth">4.flask_httpauth</a>  
+<a href="#click">5.click</a>  
+<a href="#python-socketio">6.python-socketio</a>  
 
 ### <span id="flask_wtf">1. flask_wtf</span>  <a href="#mulu">[回到目录]</a>  
 
@@ -48,3 +50,10 @@ class User(db.Model):
 ### <span id="flask_httpauth">4. flask_httpauth</span>  <a href="#mulu">[回到目录]</a>   
 
 #### 架构
+
+
+### <span id="click">5. click</span>  <a href="#mulu">[回到目录]</a>   
+https://www.cnblogs.com/alexkn/p/6980400.html
+
+### <span id="python-socketio">6. python-socketio</span>  <a href="#mulu">[回到目录]</a>  
+https://github.com/miguelgrinberg/python-socketio
