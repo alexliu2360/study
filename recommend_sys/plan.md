@@ -2,7 +2,7 @@
 #### 1.1. 推荐系统
 - 2019小象-推荐系统项目就业班一期
 - 2018七月在线推荐系统实战
-- 黑马头条
+- 2019黑马头条
 - 慕课网个性化推荐算法实战
 - 北风网 基于大数据技术推荐系统算法案例实战教程
 - 极客时间-推荐系统三十六式
@@ -25,7 +25,7 @@
   - 蜡炬教育推荐系统
   - 开课吧大数据课程 新闻头条推荐系统实战案例
 
-#### 2.2. 准备刷题
+#### 2.2. 刷题
 - 刷题网站
   - 牛客网
   - leetcode
@@ -45,6 +45,8 @@
 #### 2.4. 知识点
 - 环境配置
   - hadoop
+  - mapreduce
+  - yarn
   - zookeeper
   - spark
   - flume
@@ -93,6 +95,110 @@
     - 基于模型协同过滤推荐离线召回：ALS
     - 基于内容的离线召回
   - 
+
+#### 2.5. 黑马头条推荐系统介绍笔记
+- mapreduce
+  - hadoop streaming  脚本串行化 类似于面向过程
+  - mrjob 类似于面向对象的编程  
+    ```python
+    from mrjob.job import MRJob.MRStep 
+    import heapq
+
+    class TopN(MrJob):
+        def mapper(self):
+            pass
+        def container(self, word, count):
+            pass
+        def 
+    ```
+  - MRJOB文件合并
+  - Mapreduce慢的原因
+    - 数据处理的时候频繁的在磁盘和内存中进行数据IO，而不是在内存中进行处理，导致速度比较慢
+    - buffer in memory：达到80%数据时，将数据所在内存上，将这部分输出到磁盘上
+  - mapreduce架构演变
+    - 1.x的时候
+      - jobTracker master 计算集群管理
+      - TaskTracker slave 负责具体任务执行
+      - Task Schedule 作业调度
+    - 2.x yarn出现 作业的调度交给yarn处理
+      - Mapreduce只是进行具体任务执行
+  - hadoop生态系统
+    - HDFS(Hadoop分布式存储系统)
+    - YARN Map Reduce
+    - hive(sql query)
+    - R Connectors(stactistics)
+    - Mahout(machine learning)
+    - Pig(scripting)
+    - Oozie(workflow)
+    - Hbase(Columnar Store 列存储 基于HDFS) happybase
+    - Zookeeper(coordination master节点选举) kazoo
+    - Flume(Log Collector)
+    - Sqoop(Data Exchange mysql/oracle和hdfs/hbase之间的数据交换)
+    - Spark 分布式的计算框架基于内存(基于scala)  pyspark
+      - spark core -> mapreduce
+      - spark sql -> hive
+      - spark streaming 
+      - spark ML spark MLlib
+    - Kafka(MQ 消息队列) 
+    - Storm 分布式的流式计算框架 不适合python操作
+    - Flink 分布式计算框架 python操作storm
+  - hadoop发行版本选择
+    - cdh5.7.0  Cloudera Distributed Hadoop
+    - 只要cdh版本一致，各个组件不会有兼容性问题
+    - cdh版本的组件并没有全部开源
+    - hadoop-2.6.0-cdh-5.7.0和flume-cdh-5.7.0
+
+### 3. 常见推荐算法面试题
+- 请详细说说协同过滤的原理  
+- 搜索和推荐中的精度和召回(recall)分别是什么意思？
+- 推荐系统有哪些常用的评价标准
+- 请详细聊聊推荐系统里的排序算法
+- 怎么解决推荐系统中的冷启动问题？
+- 请聊聊你所了解的推荐系统算法
+- 了解隐语义模型在推荐系统中的应用的么？
+- 如何通俗理解奇异值分解
+- 请通俗的解释下什么叫张量分解？
+- 请说说隐语义模型 LFM 背后的原理
+- 请详细说说你对 Learning to rank 的通俗理解
+- 简述推荐系统的演进史
+- 推荐系统评估(从用户\内容提供方\网站角度)
+- 推荐系统常用评估指标
+- 推荐系统准确性(学术界)的评估函数
+- 推荐系统多样性&新颖性&惊喜性
+- 解释 Exploitation & Exploration
+- Bandit 算法-原理
+- 什么是多层重叠试验框架?
+- 预训练方法 BERT 和 OpenAI GPT 有什么区别？
+- 对比 BERT、 OpenAI GPT、 ELMo 预训练模型架构间差异
+- GCN 方法分为哪两类？
+- 什么是图卷积神经网络？
+- 如何理解图卷积算法？
+- GCN 有哪些特征？
+- 已知基于数据驱动的机器学习和优化技术在单场景内的 A/B
+- 额、单价都取得了不错的效果。 但是，目前各个场景之
+- 哪些比较严重的问题 ？
+- 什么是多场景联合排序算法 ？
+- IRGAN 框架具体是什么？
+- 推荐页与搜索页特性有什么不同？
+- 推荐系统常用的评价指标有哪些？
+- 请画出点击率预估流程图，分为那两部分？
+- 使用 FFM 有哪些需要注意的地方
+- 什么是 DSSM?有什么优缺点？
+- 什么是 wide&deep 模型？
+- Join training 和 ensemble training 有什么区别？
+- 简述 DeepFM 模型？
+- Collaborative Knowledge Base Embedding使用哪三种知识的学习？
+- 怎样将知识图谱引入推荐系统 ？
+- 普通的逻辑回归能否用于大规模的广告点击率预估 ，为什么？
+- FTRL 在准备训练数据（特征工程）和训练模型时有哪些 trick ？
+- 阿里最新开源的 X-Deep Learning 为 Online Learning 提供了哪些解决方案？
+- 特征交叉(特征组合)方式有哪些?
+- 特征选择的方法有哪些?
+- 简述 Multi-task learning(MLT)多任务学习
+- 如何离线评价召回阶段各种模型算法的好坏？由于没有明确的
+- 还是 auc 都不知道该怎么做？
+
+  
 
 
 
