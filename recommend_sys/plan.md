@@ -124,7 +124,7 @@
       - Mapreduce只是进行具体任务执行
   - hadoop生态系统
     - HDFS(Hadoop分布式存储系统)
-    - YARN Map Reduce
+    - YARN(相当于Map Reduce)
     - hive(sql query)
     - R Connectors(stactistics)
     - Mahout(machine learning)
