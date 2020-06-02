@@ -3,7 +3,7 @@
 
 
 |  题号   | 题目  |标签|链接|
-| : ----  :| :----  |:----  :|:----|
+ : ----  :| :----  |:----  :|:----
 | 24  | List_ReverseLinkedList |  List |-|
 | 24  | List_ReverseLinkedList2 |  List |-|
 | 24  | List_RemoveLinkedListElements |  List |-|
