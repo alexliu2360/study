@@ -1,9 +1,5 @@
-这里是leetcode的题目
------------------
-
-
-|  题号   | 题目  |标签|链接|
--  :| :-：  |:-  :|:-
+|题号|题目|标签|链接|
+|----|----|----|----|
 | 24  | List_ReverseLinkedList |  List |-|
 | 24  | List_ReverseLinkedList2 |  List |-|
 | 24  | List_RemoveLinkedListElements |  List |-|
@@ -22,6 +18,5 @@
 | 71  | Stack_SimplifyPath |  Stack |https://leetcode-cn.com/problems/simplify-path/|
 | 102  | Queue_BinaryTreeLevelOrderTraversal |  Queue |https://leetcode.com/problems/binary-tree-level-order-traversal/description/|
 | 341  | Stack_FlattenNestedListIterator |  Stack |https://leetcode-cn.com/problems/flatten-nested-list-iterator/|
-
-
+ 
 
